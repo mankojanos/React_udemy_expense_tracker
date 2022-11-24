@@ -1,15 +1,16 @@
 import ExpenseItem from "./ExpenseItem";
+import "./Expenses.css";
 
-function Expenses(expenses) {
+function Expenses(props) {
   const results = [];
 
-  expenses["expenses"].forEach((exp, index) => {
+  props.items.forEach((exp, index) => {
     results.push(
       <ExpenseItem
-        key={expenses["expenses"][index].id}
-        title={expenses["expenses"][index].title}
-        amount={expenses["expenses"][index].amount}
-        date={expenses["expenses"][index].date}
+        key={props.items[index].id}
+        title={props.items[index].title}
+        amount={props.items[index].amount}
+        date={props.items[index].date}
       />
     );
   });
