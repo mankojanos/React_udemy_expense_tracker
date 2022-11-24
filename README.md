@@ -1,2 +1,3 @@
 # React_udemy
- Tutorial excercises
+
+React Udemy course by Maximilian Schwarzmüller
