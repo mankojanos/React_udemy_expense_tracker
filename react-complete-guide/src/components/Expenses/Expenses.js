@@ -1,8 +1,10 @@
 import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/Card";
 import "./Expenses.css";
+import ExpensesFilter from "../ExpensesFilter/ExpensesFilter";
 
 const Expenses = (props) => {
+  
   const results = [];
 
   props.items.forEach((exp, index) => {
@@ -16,7 +18,13 @@ const Expenses = (props) => {
     );
   });
 
-  return <Card className="expenses">{results}</Card>;
+  return (
+    <div>
+      <ExpensesFilter />
+      <Card className="expenses">{results}</Card>
+    </div>
+  );
+  
 };
 
 export default Expenses;
